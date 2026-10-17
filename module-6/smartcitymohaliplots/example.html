@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <h1>About Us</h1>
+        <p>
+            previousElementSibling
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis vel, iusto atque cumque asperiores
+            ipsam placeat animi adipisci porro eum tenetur eligendi odio aut consectetur velit. Quidem sint earum
+            laboriosam?
+        </p>
+        <button>Read More</button>
+        <p>nextElementSibling
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam eius ut tempore quaerat iste suscipit
+            obcaecati odit minima ab ex, laudantium maiores totam culpa consequatur, repudiandae quibusdam quis vel.
+        </p>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector("button")
+
+    let parentDiv = document.querySelector(".mainDiv")
+
+    console.log(parentDiv.firstElementChild);
+    console.log(parentDiv.lastElementChild);
+
+    console.log(parentDiv.children[0]);
+    console.log(parentDiv.children[1]);
+    console.log(parentDiv.children[2]);
+    console.log(parentDiv.children[3]);
+    //Array -> HTML Collection
+    //[
+    //0: <h1>About Us</h1>
+    //1:
+    //]
+
+
+    btn.addEventListener(
+        "click",
+        () => {
+            console.log(btn);
+            console.log(btn.parentElement);
+            console.log(btn.parentElement.parentElement);
+            console.log(btn.nextElementSibling);
+            console.log(btn.previousElementSibling);
+            console.log(btn.previousElementSibling.previousElementSibling);
+
+        }
+    )
+</script>
+
+</html>

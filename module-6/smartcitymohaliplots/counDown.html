@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let date=new Date()
+
+    let currentMs=date.getTime()
+    console.log(currentMs);
+    
+
+
+    let counDownDate=new Date("Oct 22 2026 11:59:59 GMT+0530")
+    console.log(counDownDate);
+    let counDownDateMs=counDownDate.getTime()
+
+    console.log(counDownDateMs);
+    let diffMs=counDownDateMs-currentMs
+
+    let totalSecond= diffMs/1000
+    console.log(totalSecond);
+
+ 
+    let oneMin=60             //60
+    let oneHour=oneMin*oneMin //3600
+
+    let oneDaySec=24*oneHour //86400
+
+    //Day
+    //Hour
+    //Min
+    //Sec
+    
+    
+    
+    
+</script>
+</html>

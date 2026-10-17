@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Num1 <input type="text" id="num1" /> <br/>
+    Num2 <input type="text" id="num2"/> <br/>
+    <button onclick="addTwoNumber()">Add</button> <br/>
+    Output
+    <input type="text" id="outPut">
+</body>
+<script>
+    let num1Input=document.getElementById("num1")
+    //<input type="text" id="num1" value="20" />
+    let num2Input=document.getElementById("num2")
+    //<input type="text" id="num2" value="30"/> 
+    let outPutElement=document.getElementById("outPut")
+    //  <input type="text" id="outPut">
+    function addTwoNumber(){
+        let num1Value= Number(num1Input.value) //20  //String
+        let num2Value= Number(num2Input.value) //30 
+        outPutElement.value=num1Value+num2Value //20+30 = 50
+         //  <input type="text" id="outPut" value="50">
+    }
+</script>
+</html>

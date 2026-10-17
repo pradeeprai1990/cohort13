@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .activeDiv {
+            background-color: yellow;
+            color: red;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btnColorChange">Random Color</button>
+    <button id="btn1">Add</button>
+    <button id="btn2">Remove</button>
+    <button id="btn3">Toggle</button>
+    <div id="mainDiv">
+        <h1>About Us</h1>
+        <p style="background: rgb(44,66,77);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, maiores. Impedit, expedita minima!
+            Iste, non. Voluptas autem deserunt officiis eos rerum iusto vitae quo eius! Officiis enim adipisci
+            consequuntur commodi.
+        </p>
+    </div>
+</body>
+<script>
+    let btn1Element = document.querySelector("#btn1")
+    let btn2Element = document.querySelector("#btn2")
+    let btn3Element = document.querySelector("#btn3")
+
+    let mainDivElement = document.querySelector("#mainDiv")
+
+    btn1Element.addEventListener(
+        "click",
+        () => {
+
+
+            mainDivElement.classList.add("activeDiv")
+            btn1Element.classList.add("activeDiv")
+
+
+
+
+        }
+    )
+
+    btn2Element.addEventListener(
+        "click",
+        () => {
+            mainDivElement.classList.remove("activeDiv")
+        }
+    )
+    btn3Element.addEventListener(
+        "click",
+        () => {
+            mainDivElement.classList.toggle("activeDiv")
+        }
+    )
+
+    // let a=10
+
+    // let w=`welcome ${a} to ws`
+    // console.log('====================================');
+    // console.log(w);
+    // console.log('====================================');
+
+
+    let r = Math.random() //0-1 //4 Digit random OTP
+    console.log(r);
+
+    console.log('====================================');
+    console.log(Math.ceil(99.2));
+    console.log('====================================');  //Next int value 21
+
+
+
+    console.log('====================================');
+    console.log(Math.floor(99.2));
+    console.log('====================================');  //Next int value 21
+
+
+  
+    let btnColorChange=document.querySelector("#btnColorChange")
+    let bodytag=document.querySelector("body")
+    btnColorChange.addEventListener(
+        "click",
+        ()=>{
+              let rCode = Math.floor(Math.random() * 255)
+              let gCode = Math.floor(Math.random() * 255)
+              let bCode = Math.floor(Math.random() * 255)
+            
+             
+              bodytag.style.background=`rgb(${rCode},${gCode},${bCode})`
+              
+        }
+    )
+</script>
+
+</html>

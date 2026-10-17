@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="img1" width="400" height="300" src="https://smartcitymohaliplots.realtynivesh.com/img/Site%20visit%20slide%202.jpg" alt="">
+
+    <img  id="img2"  width="400" height="300" src="https://smartcitymohaliplots.realtynivesh.com/img/1.jpeg" alt="">
+   
+    <br/>
+    <button onclick="swapImage()">Image Swap</button>
+
+</body>
+<script>
+    let img1Element=document.getElementById("img1")
+    let img2Element=document.getElementById("img2")   
+    function swapImage(){
+        let img1Path=img1Element.src
+        let img2Path=img2Element.src
+        img1Element.src=img2Path
+        img2Element.src=img1Path
+    }
+</script>
+</html>

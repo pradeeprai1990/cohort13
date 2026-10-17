@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.bannerSection{
+    width: 100%;
+}
+
+.bannerSection img{
+    width: 100%;
+    display: block;
+}
+
+.formSection{
+    background-color: #306598;
+    padding: 30px 0px;
+}

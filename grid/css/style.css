@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+   box-shadow: none;
+}
+
+.treatmentsSection{
+    width: 100%;
+    background: url("https://www.noormedicare.com/shared_icons/specialized_treat.png");
+    padding: 50px 0px;
+}
+.treatmentsSection>h3{
+    color: #bc3e4d;
+    text-align: center;
+}
+.treatmentsSection h2{
+    margin-top: 10px;
+    text-align: center;
+}
+.treatmentsSection p{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.treatmentsMid{
+    max-width: 1170px;
+    margin: auto;
+    display: grid;
+    margin-top: 30px;
+    gap: 30px;
+    grid-template-columns:repeat(4,1fr);
+
+     /* grid-template-columns:repeat(2,1fr); */
+
+      /* grid-template-columns:repeat(1,1fr); */
+}
+.treatmentItem{
+    background-color: white;
+}
+.treatmentItem img{
+    width: 100%;
+}
+.treatmentItem h3{
+    text-align: center;
+}
+.treatmentItemContent{
+    padding: 10px;
+}
+.btnOuter{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.btnOuter button{
+    padding: 10px 0px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.bannerSection{
+    width: 100%;
+   
+    background: url("../images/hero.webp") no-repeat center;
+    background-size: cover;
+}
+.bannerMid{
+    max-width: 1170px;
+    border: 1px solid red;
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: 60%;
+    margin: auto;
+}
+.bannerLeft{
+    border: 1px solid blue;
+}
+.bannerLeft h1{
+    font-size: 50px;
+}
+.bannerLeft p{
+    font-size: 50px;
+    line-height: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.bannerLeftRows{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 40px;
+}
+.bannerItems{
+    text-align: center;
+    padding: 20px 0px;
+    background-color: white;
+}

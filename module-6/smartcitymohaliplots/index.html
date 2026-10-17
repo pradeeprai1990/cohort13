@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+
+    <div id="overlay" class="fixed w-full h-full bg-[#000000d6] duration-300 z-9 flex justify-center items-center scale-0">
+        <div class="max-w-[1000px] relative">
+            <i class="fa-solid cursor-pointer fa-xmark text-2xl text-white absolute right-0 top-[-10px]"></i>
+            <img id="mainImg" src="" alt="">
+        </div>
+    </div>
+
+    <div id="enModal" class="fixed w-[350px]  border-1 border-[#ccc] bg-white z-9
+    left-[50%] translate-x-[-50%]
+    top-[-1000px]   translate-y-[-50%]
+    duration-1000
+    ">
+        <h2 class="border-b-1 border-[#ccc]  text-xl font-bold p-2 realative">Enquire Now
+            <span class="absolute right-2 cursor-pointer">&times;</span>
+
+        </h2>
+
+        <form class="p-3">
+            <p>
+                Feel free to contact us if you need any assistance, any help or another question.
+            </p>
+
+            <input type="text" placeholder="Name" class="w-full border-1 border-[#ccc] p-2 mt-3">
+
+            <input type="text" placeholder="Email" class="w-full border-1 border-[#ccc] p-2 mt-3">
+
+            <input type="text" placeholder="Phone" class="w-full border-1 border-[#ccc] p-2 mt-3">
+
+            <textarea name="" placeholder="Message" class="w-full border-1 border-[#ccc] p-2 mt-3 h-[80px]"></textarea>
+            <button>
+                Enquire Now
+            </button>
+        </form>
+
+    </div>
+
+
+
+    <header class="flex shadow-lg p-[10px_15px] sticky top-0 justify-between
+ items-center">
+        <figure>
+            <img width="80" src="https://smartcitymohaliplots.realtynivesh.com/Logo.svg" alt="">
+        </figure>
+        <nav id="menu"
+            class="md:static fixed md:h-auto h-screen  top-0 md:bg-white duration-1000 bg-blue-500  left-[-100%] md:p-0 p-3 md:w-auto w-[80%] ">
+            <ul class=" flex md:flex-row flex-col
+                gap-5 md:items-center">
+                <li>
+                    <a href=""> Overview</a>
+
+                </li>
+                <li>
+                    <a href=""> Project Highlights </a>
+
+                </li>
+                <li>
+                    <a href="">
+                        Site Plan
+
+                    </a>
+                </li>
+                <li>
+                    <button id="bookBTN" class="bg-[green] p-2 text-white">
+                        Book Online
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <span id="menuIcon" class="md:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </span>
+    </header>
+
+    <section class="py-10 bg-yellow-200">
+        <h2 class="text-center font-bold text-2xl" id="galleryHeading">Product Gallery</h2>
+        <div id="imageGallery" class="max-w-[1320px] gap-5 mx-auto grid grid-cols-3 mt-5">
+            <figure>
+                <img src="https://uptown-skylla.com/images/our-project-image-1.jpg" alt="">
+            </figure>
+              <figure>
+                <img  src="https://uptown-skylla.com/images/our-project-image-2.jpg" alt="">
+            </figure>
+             <figure>
+                <img  src="https://uptown-skylla.com/images/our-project-image-3.jpg" alt="">
+            </figure>
+             <figure>
+                <img  src="https://uptown-skylla.com/images/our-project-image-4.jpg" alt="">
+            </figure>
+              <figure>
+                <img  src="https://uptown-skylla.com/images/our-project-image-5.jpg" alt="">
+            </figure>
+             <figure>
+                <img  src="https://uptown-skylla.com/images/our-project-image-6.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+</body>
+
+<script>
+    let bookBTN = document.querySelector("#bookBTN")
+    let enModal = document.querySelector("#enModal")
+    let galleryHeading=document.querySelector("#galleryHeading")
+    let closeBtn = document.querySelector("#enModal span")
+
+    let showModal= () => {
+            enModal.classList.remove("top-[-1000px]")
+            enModal.classList.add("top-[50%]")
+     }
+
+    // showModal() //Page Open Modal Display
+
+    setTimeout(  showModal,5000  )
+
+    setTimeout( 
+        ()=>{
+            galleryHeading.style.color="red"
+        },
+    2000)
+
+    bookBTN.addEventListener(
+        "click",
+        showModal
+    )
+
+    closeBtn.addEventListener(
+        "click",
+        () => {
+            enModal.classList.add("top-[-1000px]")
+            enModal.classList.remove("top-[50%]")
+        }
+    )
+
+
+    let menuIcon = document.querySelector("#menuIcon")
+    let navBar = document.querySelector("#menu")
+    let menuIconBar=document.querySelector("#menuIcon i")
+    menuIcon.addEventListener(
+        "click",
+        () => {
+            navBar.classList.toggle("left-[-100%]")
+            navBar.classList.toggle("left-[0%]")
+            menuIconBar.classList.toggle("fa-bars")
+             menuIconBar.classList.toggle("fa-xmark")
+
+            
+        }
+    )
+
+
+      // function getImagePath(currentImg){
+    //     console.log(currentImg.src);
+        
+    // }
+
+    let overlayElement=document.querySelector("#overlay") 
+    let mainImg=document.querySelector("#mainImg")
+    let imageGalleryElement=document.querySelector("#imageGallery")
+    let closeBtngallery=document.querySelector("#overlay i")
+    imageGalleryElement.addEventListener(
+        "click",
+        (  event  )=>{
+            let clickedImageSrc=event.target.src
+            if(clickedImageSrc){
+                    overlayElement.classList.remove("scale-0")
+                     overlayElement.classList.add("scale-100")
+                     mainImg.src=clickedImageSrc
+                
+            }
+            //<img src="https://uptown-skylla.com/images/our-project-image-2.jpg" alt="">
+            //https://uptown-skylla.com/images/our-project-image-2.jpg
+            
+        }
+    )
+
+
+    closeBtngallery.addEventListener(
+        "click",
+        ()=>{
+             overlayElement.classList.add("scale-0")
+             overlayElement.classList.remove("scale-100")
+        }
+    )
+
+
+    
+
+</script>
+
+</html>
